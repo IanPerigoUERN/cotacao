@@ -3,7 +3,7 @@
 #include "lwip/tcp.h"
 #include <string.h>
 #include <stdio.h>
-#include <credentials.h>
+#include <CREDENTIALS.h>
 
 
 #define LED_PIN 12          // Define o pino do LED
