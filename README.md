@@ -1,5 +1,27 @@
 # Projeto: RealTime FX - Sistema Embarcado de Cotações
 
+## Membros do projeto:
+
+### Alailson Lima : 
+
+### Brunno Marques:
+
+### Eric Natan: 
+
+### Ian Périgo: https://www.linkedin.com/in/ianperigo/
+
+### Igor Fabrício:
+
+### Júlio Aprígio:
+
+### Laércio Martins:
+
+### Liélson Andrade: https://github.com/lielsonandrade
+
+### Luks:
+
+### Yuri Cavalcanti: https://github.com/yuriaquino02
+
 ## Teoria
 O objetivo deste projeto é desenvolver um sistema embarcado que exiba, em tempo real, a cotação atual das moedas oficiais em relação ao Real Brasileiro. O sistema apresentará as cotações no display de forma contínua, em um formato semelhante a manchetes de jornais.
 
