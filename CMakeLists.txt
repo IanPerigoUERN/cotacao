@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(cotacao cotacao.c Display/Display.c Display/Display1306/ssd1306_i2c.c) # Display OLED
+add_executable(cotacao cotacao.c Display/Display.c Display/Display1306/ssd1306_i2c.c APIconection/http_server.c) # Display OLED
 
 pico_set_program_name(cotacao "cotacao")
 pico_set_program_version(cotacao "0.1")
