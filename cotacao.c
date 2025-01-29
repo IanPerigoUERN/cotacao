@@ -10,13 +10,19 @@
 #include "APIconection/http_server.h"
 #include <Display/Display.h>
 #include "LedMatrix/ws2818b.pio.h"
+#include "Button/Button.h"
 
 
 int main() {
     stdio_init_all();  // Inicializa a saída padrão
     
     // Testes dos módulos
-    
+    init_button_and_led();  // Inicializa o botão e o LED
+
+    while (true) {
+        update_led_state();  // Atualiza o estado do LED com base no botão
+        sleep_ms(50);  // Pequeno delay para evitar leituras inconsistentes
+    }
     ConfigDisplay();
     DisplayMessage();
     
