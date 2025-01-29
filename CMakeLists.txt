@@ -35,13 +35,13 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(cotacao cotacao.c )
+add_executable(cotacao cotacao.c Display/Display.c Display/Display1306/ssd1306_i2c.c) # Display OLED
 
 pico_set_program_name(cotacao "cotacao")
 pico_set_program_version(cotacao "0.1")
 
 # Generate PIO header
-pico_generate_pio_header(cotacao ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
+pico_generate_pio_header(cotacao ${CMAKE_CURRENT_LIST_DIR}/LedMatrix/ws2818b.pio) #Matriz de leds
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(cotacao 0)
@@ -49,7 +49,12 @@ pico_enable_stdio_usb(cotacao 1)
 
 # Add the standard library to the build
 target_link_libraries(cotacao
-        pico_stdlib)
+        pico_stdlib
+        hardware_i2c
+        hardware_pio
+        pico_cyw43_arch_lwip_threadsafe_background
+        hardware_i2c # Display OLED
+        )
 
 # Add the standard include files to the build
 target_include_directories(cotacao PRIVATE
@@ -57,11 +62,8 @@ target_include_directories(cotacao PRIVATE
 )
 
 # Add any user requested libraries
-target_link_libraries(cotacao 
-        hardware_i2c
-        hardware_pio
-        pico_cyw43_arch_lwip_threadsafe_background
-        )
+#target_link_libraries(
+ #       )
 
 pico_add_extra_outputs(cotacao)
 

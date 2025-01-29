@@ -12,9 +12,9 @@
 
 ### Igor Fabrício:
 
-### Júlio Aprígio:
+### Júlio Aprígio: https://www.linkedin.com/in/julio-aprigio8/  https://github.com/JulioAprigio8
 
-### Laércio Martins:
+### Laércio Martins: https://github.com/Ailatism https://www.linkedin.com/in/laerciomartinsfh/
 
 ### Liélson Andrade: https://github.com/lielsonandrade
 

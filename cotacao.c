@@ -3,7 +3,13 @@
 #include "lwip/tcp.h"
 #include <string.h>
 #include <stdio.h>
-#include <CREDENTIALS.h>
+#include <stdlib.h>
+#include <ctype.h>
+//Módulos adicionados
+#include <APIconection/CREDENTIALS.h>
+#include <Display/Display.h>
+#include "LedMatrix/ws2818b.pio.h"
+
 
 
 #define LED_PIN 12          // Define o pino do LED
@@ -74,6 +80,15 @@ static void start_http_server(void) {
 
 int main() {
     stdio_init_all();  // Inicializa a saída padrão
+    
+    // Testes dos módulos
+    
+    ConfigDisplay();
+    DisplayMessage();
+    
+    
+    // Fim dos testes
+
     sleep_ms(10000);
     printf("Iniciando servidor HTTP\n");
 
