@@ -13,10 +13,21 @@ void init_button_and_led() {
     gpio_init(BUTTON_A);
     gpio_set_dir(BUTTON_A, GPIO_IN);
     gpio_pull_up(BUTTON_A);
+
+    // Configuração do Botão B como entrada com pull-up
+    gpio_init(BUTTON_B);
+    gpio_set_dir(BUTTON_B, GPIO_IN);
+    gpio_pull_up(BUTTON_B);
 }
 
-// Atualiza o estado do LED com base no estado do botão
+// Atualiza o estado do LED com base no estado dos botões
 void update_led_state() {
-    bool button_a_state = gpio_get(BUTTON_A);  // Lê o estado do botão
-    gpio_put(LED_BLUE, button_a_state);  // Acende o LED se o botão estiver solto, apaga se pressionado
+    bool button_a_state = gpio_get(BUTTON_A);  // Lê o estado do Botão A
+    bool button_b_state = gpio_get(BUTTON_B);  // Lê o estado do Botão B
+
+    if (button_a_state == 0) {  // Se o Botão A for pressionado (LOW)
+        gpio_put(LED_BLUE, true);  // Acende o LED
+    } else if (button_b_state == 0) {  // Se o Botão B for pressionado (LOW)
+        gpio_put(LED_BLUE, false);  // Apaga o LED
+    }
 }
