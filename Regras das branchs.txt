@@ -1,0 +1,21 @@
+1- Clone o repositório: https://github.com/IanPerigoUERN/cotacao.git
+
+1.1- Branchs disponível: 
+- feature/API
+- feature/button
+- feature/display
+- feature/matrix
+- feature/joy
+
+2- Mude para a sua branch de trabalho com: git checkout nome-da-branch ou git switch nome-da-branch
+
+3- Confirme a branch que você está: git branch
+
+4- Adicione arquivos e alterações nos arquivos, commite mudanças e suba para sua branch:
+
+git add .
+git commit -m "Mensagem de commit"
+git push origin nome-da-branch
+
+
+
