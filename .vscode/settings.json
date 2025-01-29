@@ -39,6 +39,7 @@
     "files.associations": {
         "credentials.h": "c",
         "http_server.h": "c",
-        "joystick.h": "c"
+        "joystick.h": "c",
+        "ws2818b.pio.h": "c"
     }
 }

@@ -7,10 +7,11 @@
 #include <ctype.h>
 //Módulos adicionados
 #include "CREDENTIALS.h"
+#include "http_server.h"
 
 
 
-#define LED_PIN 12          // Define o pino do LED
+//#define LED_PIN 12          // Define o pino do LED
 //#define WIFI_SSID ""  // Substitua pelo nome da sua rede Wi-Fi
 //#define WIFI_PASS "" // Substitua pela senha da sua rede Wi-Fi
 
@@ -37,9 +38,9 @@ static err_t http_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_
     char *request = (char *)p->payload;
 
     if (strstr(request, "GET /led/on")) {
-        gpio_put(LED_PIN, 1);  // Liga o LED
+        gpio_put(BLUE_LED_PIN, 1);  // Liga o LED
     } else if (strstr(request, "GET /led/off")) {
-        gpio_put(LED_PIN, 0);  // Desliga o LED
+        gpio_put(BLUE_LED_PIN, 0);  // Desliga o LED
     }
 
     // Envia a resposta HTTP

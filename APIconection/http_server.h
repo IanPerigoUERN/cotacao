@@ -11,7 +11,7 @@
 
 
 // Definindo o pino do LED
-#define LED_PIN 12
+#define BLUE_LED_PIN 12
 
 // Definindo a resposta HTTP
 /*
