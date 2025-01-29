@@ -43,10 +43,10 @@ void DisplayMessage(){
     ConfigDisplay();
     
      char *text[] = {
-        "  Sinal Aberto   ",
-        "  Atravessar  ",
-        "  com  ", 
-        "  cuidado  "};
+        "  Projeto   ",
+        "  Cotacao  ",
+        "  dos  ", 
+        "  Jsons  "};
 
     int y = 0;
     for (uint i = 0; i < count_of(text); i++)
