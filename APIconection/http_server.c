@@ -15,6 +15,7 @@
 //#define WIFI_PASS "" // Substitua pela senha da sua rede Wi-Fi
 
 // Buffer para respostas HTTP
+
 #define HTTP_RESPONSE "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" \
                       "<!DOCTYPE html><html><body>" \
                       "<h1>Controle do LED</h1>" \
@@ -57,7 +58,7 @@ static err_t connection_callback(void *arg, struct tcp_pcb *newpcb, err_t err) {
 }
 
 // Função de setup do servidor TCP
-static void start_http_server(void) {
+ void start_http_server(void) {
     struct tcp_pcb *pcb = tcp_new();
     if (!pcb) {
         printf("Erro ao criar PCB\n");
