@@ -11,11 +11,23 @@
 
 3- Confirme a branch que você está: git branch
 
-4- Adicione arquivos e alterações nos arquivos, commite mudanças e suba para sua branch:
+4- Abra a extensão do raspberry pi pico no vscode e importe o repositório clonado com a versãp SDK 1.5.1
 
-git add .
-git commit -m "Mensagem de commit"
-git push origin nome-da-branch
+5- Espere ele buildar o projeto
+
+6- Confirme que está no repositório ou entre no repositório
+
+7- Abra a pasta APIconetcion e leia cretentials.txt e execute o que é pedido
+
+8- Altere o código do módulo que você é responsável, lembre de adicionar as funções que criou no arquivo .c (exemplo display.c) lá no no seu arquivo .h (display.h)
+
+9- Chame as funções no arquivo cotacao.c (que é o main do projeto) e compile.
+
+10- Adicione arquivos e alterações nos arquivos, commite mudanças e suba para sua branch:
+
+git add . //Adiciona ou altera todos os arquivos
+git commit -m "Mensagem de commit" // Mensagem do commit
+git push origin nome-da-branch  // suba para a branch do seu módulo (exemplo : git push origin feature/display ou git push origin feature/API)
 
 
 
